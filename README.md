@@ -6,7 +6,11 @@ Este repositorio utiliza [pre-commit](https://pre-commit.com) para validaciones 
 
 1. pre-commit (https://pre-commit.com/#install)
 
+GA: En Ubuntu sudo apt install pre-commit
+
 Después de clonar el repositorio usted debería ejecutar el siguiente comando:
+
+GA: esto es para los hooks adentro del repositorio
 
 ```
 pre-commit install
