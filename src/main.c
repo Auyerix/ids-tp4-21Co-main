@@ -19,15 +19,18 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 SPDX-License-Identifier: MIT
 *************************************************************************************************/
 
-/** @file main.c
+/** @file
  ** @brief Definición de la función principal del programa
  **/
 
 /* === Headers files inclusions =============================================================== */
 
 #include "main.h"
+#include "gpio.h"
 
 /* === Macros definitions ====================================================================== */
+#define LED_ROJO_PORT 1
+#define LED_ROJO_BIT  5
 
 /* === Private data type declarations ========================================================== */
 
@@ -44,6 +47,11 @@ SPDX-License-Identifier: MIT
 /* === Public function implementation ========================================================== */
 
 int main(void) {
+
+    gpio_t led_rojo = gpioCreate(LED_ROJO_PORT, LED_ROJO_BIT);
+    gpioSetOutput(led_rojo, true);
+    gpioSetState(led_rojo, true);
+
     return 0;
 }
 

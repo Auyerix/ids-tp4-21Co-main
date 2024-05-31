@@ -1,0 +1,35 @@
+Notas generales de la clase de IdeS del día 30/5/24
+
+Si tengo un plug in en VSC de pre-commit me corregirá el archivo .c directamnte cuando lo escribo
+el pre.commit config lo que hace se que lo corrige antes del commit y me pregunta si acepto, luego
+sincroniza el repo y el local con los cambios.
+Build essencial debería etar instalado en linux
+para compilar utilizo make que usa el makefile como template
+make clean para borrar el build que generó make
+
+Doxygen se instala  sudo apt install pre-commit y tambièn Doxygen GUI (en linux) ver README.md
+Para que genere la documentación correr doxygen el linea de comando o desde la GUI (ojo tiene
+que tener creada la carpeta build)
+sudo apt-get install doxygen-gui
+Para correrlo en modo gráfico doxywizard desde consola
+sino correr directamente doxygen desde consolo y listo...
+Algunos detalles en el GUI, hay que definir si quiero el doc en otro directorio, por default
+exporta html y latex (yo anulé latex) Si configuro que lo guarde en build no me lo sube al repo
+porque está excluido por el gitignore y no me genera tanta documentación en github.
+Ojo, la GUI toma de su configuración cuando lo corro en línea lo toma de makefile, con etiqueta
+doc: que en clase Esteban sacó y yo agregué.
+Ojo: la GUI arma su propio archivo doxyfile, entonces para correr el creado en el repo solo usar
+la línea de comando, si toco la GUI luego me va a pedir guardar el archivo doxyfile y pisaría el
+del template.
+
+Nasa:
+Funciones propuesta versalita MainFuncion, GpioLed
+Constantes CONSTANTE_NUMERO
+variable en minúscula y con guiones bajos
+Todo lo documentado en el .h està documentado en el h
+y todas las variables y funcione privadas están definidas en el .c,
+la declaro y la documento en .c, es privado y tiene documentado en el doxygen
+Para que me tire el encabezado de doxy utilizando el plugin tipéo /**
+
+git show : veo donde apunta el origin
+git remote -v muestra cual es el repo

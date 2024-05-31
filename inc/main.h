@@ -22,7 +22,7 @@ SPDX-License-Identifier: MIT
 #ifndef MAIN_H
 #define MAIN_H
 
-/** @file main.h
+/** @file
  ** @brief Definición de la función principal del programa
  **/
 
@@ -43,9 +43,9 @@ extern "C" {
 /* === Public function declarations ============================================================ */
 
 /**
- * @brief Función principal del sistema, se ejecuta al iniciar el programa
+ * @brief Función princial del proyecto
  *
- * @return int Valor de retorno, cero si esta todo bien, negativo si hay un error
+ * @return int Codigo de error devuelto al sistema operativo
  */
 int main(void);
 
