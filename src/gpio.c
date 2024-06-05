@@ -1,6 +1,9 @@
 #include "gpio.h"
 #include <stddef.h>
 #include <stdbool.h>
+#include <stdlib.h>
+
+#define USE_DYNAMIC_MEM
 
 #ifndef GPIO_MAX_INSTANCES
 #define GPIO_MAX_INSTANCES 10
@@ -10,7 +13,6 @@
  * @brief Estructura para alojar el objeto Led
  *
  */
-
 struct gpio_s {
     uint8_t port;
     uint8_t bit;
@@ -29,7 +31,8 @@ static gpio_t allocateInstance() {
     gpio_t result = NULL;
     for (int index = 0; index < GPIO_MAX_INSTANCES; index++) {
         if (!instances[index].used) {
-            result = &instances[index].used;
+            // result = &instances[index].used;
+            result = &instances[index];
             result->used = true;
             break;
         }
